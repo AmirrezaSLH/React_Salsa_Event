@@ -1,0 +1,320 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    padding: 20px 15px; /* Added extra padding to create space */
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: none; /* Removed the red background */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 10px 0; /* Added padding to create space */
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 10px 15px; /* Added margin to create space between buttons and top */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black; /* Changed text color from white to black */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    background-color: #ffcccb; /* Light pink background */
+    border: 2px solid white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background: #ff69b4; /* Hot Pink */
+    color: black;
+}
+
+/* Special Calendar Button */
+.calendar-button {
+    background: #ff0000; /* Bright Red */
+    border-color: #cc0000; /* Darker Red Border */
+    color: white !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border-radius: 0px; /* Sharper edges */
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.5); /* Strong shadow */
+    transition: all 0.3s ease;
+}
+
+.calendar-button:hover {
+    background: #cc0000; /* Darker Red */
+    color: yellow !important; /* Standout text color */
+    border-color: yellow;
+    box-shadow: 0px 4px 15px rgba(255, 255, 0, 0.8);
+}
+
+/* Sections */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #ff69b4; /* Hot Pink */
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+
+
+
+/* Hero Section */
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Full viewport height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5%;
+    color: white;
+    overflow: hidden;
+    transition: background-image 1s ease-in-out; /* Smooth transition */
+}
+
+  
+  /* Framed Container */
+  .hero-container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(192, 85, 85, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(40px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Left Side Text */
+  .hero-text {
+    width: 50%;
+    color: white;
+  }
+  
+  .event-date {
+    font-size: 18px;
+    color: #ff4081;
+    font-weight: bold;
+  }
+  
+  h1 {
+    font-size: 42px;
+    text-transform: uppercase;
+    color: white;
+    margin: 10px 0;
+  }
+  
+  h1 .highlight {
+    color: #ff4081;
+  }
+  
+  .event-details {
+    font-size: 18px;
+    margin: 15px 0;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .primary-btn,
+  .secondary-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .primary-btn {
+    background: red;
+    color: white;
+    border: none;
+  }
+  
+  .primary-btn:hover {
+    background: #ff4081;
+  }
+  
+  .secondary-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  .secondary-btn:hover {
+    background: white;
+    color: black;
+  }
+  
+  /* Right Side Image Bubble */
+  .hero-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .hero-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: bubbleEffect 3s infinite ease-in-out;
+  }
+  
+  @keyframes bubbleEffect {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 1024px) {
+    .hero-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .hero-text {
+      width: 100%;
+    }
+  
+    .hero-image {
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    .hero-image img {
+      width: 250px;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .primary-btn,
+    .secondary-btn {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+
+  
+  
+  /* Hero Section Navigation Buttons */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 20, 60, 0.8); /* Salsa Red */
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    z-index: 10;
+  }
+  
+  .nav-button:hover {
+    background: #ff69b4; /* Hot Pink */
+  }
+  
+  .prev {
+    left: 5%;
+  }
+  
+  .next {
+    right: 5%;
+  }
+  
+  /* Adjust hero-container width to prevent buttons from going out */
+  .hero-container {
+    width: 85%;
+    max-width: 1200px; /* Keeps layout consistent */
+  }
+  
+  /* Centering the Hero Buttons */
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  /* RESPONSIVE FIXES */
+  @media (max-width: 768px) {
+    .nav-button {
+      font-size: 18px;
+      padding: 8px 12px;
+    }
+  
+    .prev {
+      left: 3%;
+    }
+  
+    .next {
+      right: 3%;
+    }
+  }
+  
